@@ -19,24 +19,21 @@ public class ConsultaAluno {
 
                 String atividade = "1".equals(alunoCadastrado1.getAtividade()) ? "Musculação" : "2".equals(alunoCadastrado1.getAtividade()) ? "Musculação" : "Luta";
 
-                if (alunoCadastrado1 != null) {
-                    System.out.println("\n------ Cadastro: " + alunoCadastrado1.getId() + " ------"
-                            + "\nData e Hora do Cadastro: " + alunoCadastrado1.getDataHora().format(dataBr)
-                            + "\nNome: " + alunoCadastrado1.getDadosPessoais().getNome()
-                            + "\nCPF: " + alunoCadastrado1.getDadosPessoais().getCpf()
-                            + "\nGenero: " + alunoCadastrado1.getDadosPessoais().getGenero()
-                            + "\nData de Nascimento: " + alunoCadastrado1.getDadosPessoais().getDataNascimento()
-                            + "\nPeso: " + alunoCadastrado1.getDadosPessoais().getPeso()
-                            + "\nAltura: " + alunoCadastrado1.getDadosPessoais().getAltura()
-                            + "\nAtividade: " + atividade
-                            + atividadeReturn(alunoCadastrado1.getAtividade(), alunoCadastrado1.getDadosPessoais().getPeso(), alunoCadastrado1.getDadosPessoais().getAltura())
-                    );
-                } else {
-                    break;
-                }
-            }
+                System.out.println("\n------ Cadastro: " + alunoCadastrado1.getId() + " ------"
+                        + "\nData e Hora do Cadastro: " + alunoCadastrado1.getDataHora().format(dataBr)
+                        + "\nNome: " + alunoCadastrado1.getDadosPessoais().getNome()
+                        + "\nCPF: " + alunoCadastrado1.getDadosPessoais().getCpf()
+                        + "\nGenero: " + alunoCadastrado1.getDadosPessoais().getGenero()
+                        + "\nData de Nascimento: " + alunoCadastrado1.getDadosPessoais().getDataNascimento()
+                        + "\nPeso: " + alunoCadastrado1.getDadosPessoais().getPeso()
+                        + "\nAltura: " + alunoCadastrado1.getDadosPessoais().getAltura()
+                        + "\nAtividade: " + atividade
+                        + atividadeReturn(alunoCadastrado1.getAtividade(), alunoCadastrado1.getDadosPessoais().getPeso(), alunoCadastrado1.getDadosPessoais().getAltura())
+                );
 
-        } else {
+                break;
+            }
+        }else {
             System.out.println("""
                                
                                ################################
@@ -44,11 +41,11 @@ public class ConsultaAluno {
                                ################################
                                
                                """);
-        }
-
     }
 
-    static public String atividadeReturn(String paramAtividade, double peso, double altura) {
+}
+
+static public String atividadeReturn(String paramAtividade, double peso, double altura) {
         DecimalFormat df2Casas = new DecimalFormat("##,###.##");
         String resultado = "";
 
