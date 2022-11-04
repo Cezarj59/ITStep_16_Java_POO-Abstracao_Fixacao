@@ -49,14 +49,15 @@ public class ConsultaAluno {
     }
 
     static public String atividadeReturn(String paramAtividade, double peso, double altura) {
+        DecimalFormat  df2Casas = new DecimalFormat("##,###.##");
         String resultado = "";
 
         switch (paramAtividade) {
 
             case "1" ->
-                resultado = "\nIMC: " + new DecimalFormat("0.##").format(peso / (altura * altura));
+                resultado = "\nIMC: " + df2Casas.format(peso / (altura * altura));
             case "2" ->
-                resultado = "\nIMC: " + new DecimalFormat("0.##").format(peso / (altura * altura));
+                resultado = "\nIMC: " + df2Casas.format(peso / (altura * altura));
             case "3" ->
                 resultado = peso <= 65 ? "\nCategoria: PESO PENA" : peso <= 75 ? "\nCategoria: PESO GALO" : peso <= 85 ? "\nCategoria: PESO MÉDIO" : "\nCategoria PESO PESADO";
 
