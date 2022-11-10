@@ -1,7 +1,5 @@
-<h2>ITStep_16_Java_POO-Abstracao/Fixação</h2>
-
-<p>Atividade de Java Aula 16.</p>
-<p>Atividade para fixação Herança/Abstração Java - Sistema de  cadastro e consulta de alunos de uma Academia.</p>
+<h2>Atividade AULA 16 - Fixação Abstração, Herança e Polimorfismo.</h2>
+<h3><p>Sistema de  cadastro e consulta de alunos de uma Academia.</p></h3>
 <p>Programação Orientada a Objetos.</p>
 
 <h3>Tópicos</h3>
